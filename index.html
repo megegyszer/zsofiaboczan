@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Zsófia Boczán Photography</title>
+
+<meta name="description" content="Zsófia Boczán is a Basel-based architect and architectural photographer specialising in architectural photography and spatial documentation.">
+<meta name="author" content="Zsófia Boczán">
+<meta name="keywords" content="Zsófia Boczán, architectural photographer Basel, architecture photography Switzerland, architect Basel">
+
+<meta property="og:title" content="Zsófia Boczán Photography">
+<meta property="og:description" content="Basel-based architect and architectural photographer.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="door.png">
+<meta property="og:url" content="https://yourdomain.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --brand-bg:#222222;
+  --text:#111;
+}
+
+body{
+  margin:0;
+  font-family:"Roboto Condensed", sans-serif;
+  background:#000;
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+.desktop{
+  position:relative;
+  width:100%;
+  height:100vh;
+  height:100svh;
+  overflow:hidden;
+  background:#000;
+  opacity:0;
+  transition: opacity 1.2s ease;
+}
+.desktop.loaded{ opacity:1; }
+
+.desktop img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:right center;
+  display:block;
+}
+
+.bell-zone{
+  position:absolute;
+  width:52px;
+  height:52px;
+  transform: translate(-50%, -50%);
+}
+
+.brand-label{
+  position:absolute;
+  left:50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-48%) rotate(-2deg);
+  transform-origin:center;
+  display:inline-block;
+  width:max-content;
+  background: var(--brand-bg);
+  color:#fff;
+  padding:14px 12px;
+  text-align:center;
+  pointer-events:none;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+.brand-label .line1,
+.brand-label .line2{
+  display:block;
+  white-space:nowrap;
+  font-weight:300;
+  text-transform:uppercase;
+  font-size:18px;
+  letter-spacing:3px;
+  line-height:1.2;
+}
+.brand-label .line2{ margin-top:4px; }
+
+.doorbell{
+  position:absolute;
+  inset:0;
+  transform: translate(5px, -5px);
+  cursor:pointer;
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,0.7);
+  background: transparent;
+
+  animation: refinedPulse 4s ease-in-out infinite;
+  transition: border 0.2s ease;
+}
+
+.doorbell:hover{
+  animation:none;
+  border:1px solid rgba(255,255,255,0.95);
+  box-shadow: 0 0 18px rgba(255,255,255,0.35);
+}
+
+@keyframes refinedPulse{
+  0%{
+    box-shadow: 0 0 0 0 rgba(255,255,255,0.20);
+  }
+  60%{
+    box-shadow: 0 0 0 15px rgba(255,255,255,0);
+  }
+  100%{
+    box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+}
+
+/* Desktop contact */
+.contact-box{
+  position:absolute;
+  left:50%;
+  top: calc(100% + 80px);
+  transform: translateX(-50%);
+  background:#fff;
+  color: var(--text);
+  width:210px;
+  padding:14px 16px;
+  border-radius:14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  display:none;
+  line-height:1.7;
+  letter-spacing:0.4px;
+}
+
+.contact-box .contact{
+  font-size:15px;
+  font-weight:300;
+}
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1024px) and (min-width: 601px){
+
+  .contact-box{
+    width:180px;
+    padding:12px 14px;
+    border-radius:12px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+  }
+
+  .contact-box .contact{
+    font-size:14px;
+  }
+
+  .brand-label{
+    transform: translateX(-48%) rotate(-1.5deg);
+  }
+
+  .brand-label .line1,
+  .brand-label .line2{
+    font-size:16px;
+    letter-spacing:2.5px;
+  }
+
+  .bell-zone{
+    width:46px;
+    height:46px;
+  }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+.mobile{
+  display:none;
+  min-height:100vh;
+  background:#000;
+  color:#fff;
+}
+
+.mobile-header,
+.mobile-footer{
+  background: var(--brand-bg);
+  padding:16px 14px;
+}
+
+.mobile-header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.mobile-brand{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:300;
+  font-size:20px;
+  line-height:1.2;
+  color:#fff;
+  white-space:nowrap;
+}
+
+.mobile-contact{
+  margin-top:12px;
+  background:#fff;
+  color:#111;
+  padding:12px;
+  border-radius:12px;
+  line-height:1.7;
+}
+
+.mobile-hero{
+  width:100%;
+  aspect-ratio: 3 / 4;
+  overflow:hidden;
+  background:#000;
+}
+
+.mobile-hero img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:35% center;
+  display:block;
+}
+
+.mobile-footer{
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  font-weight:300;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  font-size:12px;
+}
+
+@media (max-width: 600px){
+  .desktop{ display:none; }
+  .mobile{ display:block; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- DESKTOP -->
+<div class="desktop" id="desktopContainer">
+  <img id="heroDesktop" src="door.png" alt="Door with doorbell" />
+
+  <div class="bell-zone" id="bellZone">
+    <div class="brand-label">
+      <span class="line1">Zsófia Boczán</span>
+      <span class="line2">Photography</span>
+    </div>
+
+    <div class="doorbell" id="doorbell"></div>
+
+    <div class="contact-box" id="contactBox">
+      <div class="contact">
+        Email: info@zsofiaboczan.ch<br>
+        Phone: +41 78 308 9718
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE -->
+<div class="mobile">
+  <div class="mobile-header">
+    <div class="mobile-brand">
+      Zsófia Boczán Photography
+    </div>
+
+    <div class="mobile-contact">
+      Email: info@zsofiaboczan.ch<br>
+      Phone: +41 78 308 9718
+    </div>
+  </div>
+
+  <div class="mobile-hero">
+    <img src="door.png" alt="Door with doorbell" />
+  </div>
+
+  <div class="mobile-footer">
+    Basel-based architect & architectural photographer
+  </div>
+</div>
+
+<script>
+const bellInImage = { x: 1957, y: 640 };
+
+const desktopContainer = document.getElementById("desktopContainer");
+const imgDesktop = document.getElementById("heroDesktop");
+const bellZone = document.getElementById("bellZone");
+const contactBox = document.getElementById("contactBox");
+const doorbell = document.getElementById("doorbell");
+
+function placeBell(){
+  const cw = desktopContainer.clientWidth;
+  const ch = desktopContainer.clientHeight;
+
+  const iw = imgDesktop.naturalWidth;
+  const ih = imgDesktop.naturalHeight;
+  if(!iw || !ih) return;
+
+  const scale = Math.max(cw / iw, ch / ih);
+  const drawnW = iw * scale;
+  const drawnH = ih * scale;
+
+  const offsetX = cw - drawnW;
+  const offsetY = (ch - drawnH) / 2;
+
+  const verticalOffset = 20;
+  const horizontalFineTune = -6;
+  const verticalFineTune = -8;
+
+  const centerX = offsetX + bellInImage.x * scale + horizontalFineTune;
+  const centerY = offsetY + bellInImage.y * scale + verticalOffset + verticalFineTune;
+
+  bellZone.style.left = `${centerX}px`;
+  bellZone.style.top  = `${centerY}px`;
+}
+
+function toggleContact(){
+  contactBox.style.display =
+    (contactBox.style.display === "block") ? "none" : "block";
+}
+
+doorbell.addEventListener("click", toggleContact);
+window.addEventListener("resize", placeBell);
+
+imgDesktop.addEventListener("load", () => {
+  placeBell();
+  requestAnimationFrame(placeBell);
+  desktopContainer.classList.add("loaded");
+});
+
+if(imgDesktop.complete){
+  placeBell();
+  requestAnimationFrame(placeBell);
+  desktopContainer.classList.add("loaded");
+}
+</script>
+
+</body>
+</html>
