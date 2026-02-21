@@ -183,13 +183,13 @@ body{
 .mobile{
   display:none;
   min-height:100vh;
-  background:#f2f1ee;   /* ✅ light background */
-  color:#111;           /* ✅ readable text */
+  background:#e9e7e2;   /* OPTION A plaster grey */
+  color:#111;
 }
 
 .mobile-header,
 .mobile-footer{
-  background:#f2f1ee;   /* ✅ light header/footer too */
+  background:#e9e7e2;
   padding:16px 14px;
 }
 
@@ -197,7 +197,16 @@ body{
   position:sticky;
   top:0;
   z-index:10;
-  border-bottom: 1px solid #e5e3de; /* ✅ subtle divider */
+  border-bottom:1px solid #d8d6d1;
+}
+
+.mobile-footer{
+  border-top:1px solid #d8d6d1;
+  color:#666666;
+  font-weight:300;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  font-size:12px;
 }
 
 .mobile-brand{
@@ -206,24 +215,27 @@ body{
   font-weight:300;
   font-size:20px;
   line-height:1.2;
-  color:#555555;        /* ✅ grey title */
+  color:#555555;     /* soft grey title */
   white-space:nowrap;
 }
 
 .mobile-contact{
   margin-top:12px;
-  background:#fff;
+  background:#ffffff;
   color:#111;
   padding:12px;
   border-radius:12px;
   line-height:1.7;
+
+  /* subtle card feeling */
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
 }
 
 .mobile-hero{
   width:100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio:3/4;
   overflow:hidden;
-  background:#f2f1ee;
+  background:#e9e7e2;
 }
 
 .mobile-hero img{
@@ -234,14 +246,6 @@ body{
   display:block;
 }
 
-.mobile-footer{
-  border-top: 1px solid #e5e3de; /* ✅ subtle divider */
-  color:#666666;                 /* ✅ readable footer */
-  font-weight:300;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  font-size:12px;
-}
 
 @media (max-width: 600px){
   .desktop{ display:none; }
