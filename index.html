@@ -96,7 +96,7 @@ body{
   cursor:pointer;
   border-radius:50%;
 
-  border:1px solid rgba(255,255,255,0.7);
+  border:1px solid #ffffffb3;
   background: transparent;
 
   animation: refinedPulse 4s ease-in-out infinite;
@@ -105,19 +105,19 @@ body{
 
 .doorbell:hover{
   animation:none;
-  border:1px solid rgba(255,255,255,0.95);
-  box-shadow: 0 0 18px rgba(255,255,255,0.35);
+  border:1px solid #fffffff2;
+  box-shadow: 0 0 18px #ffffff59;
 }
 
 @keyframes refinedPulse{
   0%{
-    box-shadow: 0 0 0 0 rgba(255,255,255,0.20);
+    box-shadow: 0 0 0 0 #ffffff33;
   }
   60%{
-    box-shadow: 0 0 0 15px rgba(255,255,255,0);
+    box-shadow: 0 0 0 15px #ffffff00;
   }
   100%{
-    box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    box-shadow: 0 0 0 0 #ffffff00;
   }
 }
 
@@ -132,7 +132,7 @@ body{
   width:210px;
   padding:14px 16px;
   border-radius:14px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 18px 40px #00000040;
   display:none;
   line-height:1.7;
   letter-spacing:0.4px;
@@ -153,7 +153,7 @@ body{
     width:180px;
     padding:12px 14px;
     border-radius:12px;
-    box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 30px #00000038;
   }
 
   .contact-box .contact{
@@ -183,13 +183,13 @@ body{
 .mobile{
   display:none;
   min-height:100vh;
-  background:#dddddd;
-  color:#a3a3a3;
+  background:#f2f1ee;   /* ✅ light background */
+  color:#111;           /* ✅ readable text */
 }
 
 .mobile-header,
 .mobile-footer{
-  background: var(--brand-bg);
+  background:#f2f1ee;   /* ✅ light header/footer too */
   padding:16px 14px;
 }
 
@@ -197,7 +197,7 @@ body{
   position:sticky;
   top:0;
   z-index:10;
-  border-bottom: 1px solid #f2f1ee;;
+  border-bottom: 1px solid #e5e3de; /* ✅ subtle divider */
 }
 
 .mobile-brand{
@@ -206,7 +206,7 @@ body{
   font-weight:300;
   font-size:20px;
   line-height:1.2;
-  color:#fff;
+  color:#555555;        /* ✅ grey title */
   white-space:nowrap;
 }
 
@@ -235,8 +235,8 @@ body{
 }
 
 .mobile-footer{
-  border-top: 1px solid #f2f1ee;
-  color: #f2f1ee;
+  border-top: 1px solid #e5e3de; /* ✅ subtle divider */
+  color:#666666;                 /* ✅ readable footer */
   font-weight:300;
   letter-spacing:1.2px;
   text-transform:uppercase;
